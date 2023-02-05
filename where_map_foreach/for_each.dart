@@ -4,10 +4,14 @@ void main(List<String> args) {
   // print the values of the list using for each method in list
   List<String> names = ['John', 'Jane', 'Jim', 'Jill'];
   // output should be John Jane Jim Jill
-
+  print(names);
   // Print the index and value of each element in a list of integers:
   List<int> numbers = [1, 2, 3, 4, 5];
-  numbers.forEach((element) {});
+  int i;
+  for (int i = 0; i < numbers.length; i++)
+    {
+    print("$i,: ${numbers[i]}");
+    }
   // output should be
   //0: 1
   //1: 2
@@ -20,13 +24,27 @@ void main(List<String> args) {
   List<String> words = ['Dart', 'Flutter', 'Angular'];
   bool contains = false;
   String search = 'Flutter';
+  words.forEach((element) {
+    if(element==search){
+      contains= true;
+      print(contains);
+    }
+    else
+    {
+      contains= false;
+      print(contains);
+    }
+  });
   // print true if the list contains the search string
   
   //! hard
   // double the values in the map using for each
   Map<String, int> map = {"a": 1, "b": 2, "c": 3, "d": 4};
   Map<String, int> doubledMap = {};
-  map.forEach((key, value) {});
+  map.forEach((key, value) {
+    doubledMap[key] = value * 2;
+  });
+  print(doubledMap);
   // output should be {"a": 2, "b": 4, "c": 6, "d": 8}
 
   // Write a function that takes a List of Maps and returns a Map with the sum of values for each key
