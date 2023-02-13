@@ -18,8 +18,9 @@ void main(List<String> args) async {
 
   // another way to handle Future by using try - catch
   // make the Function (async)
-  try {
-    final future = await Future<String>.delayed(
+  Future <void> x() async{ 
+    try {
+     final future = await Future<String>.delayed(
       Duration(seconds: 1),
       () => 'The typeData you\'ve chosen after (Future)',
     );
@@ -28,3 +29,5 @@ void main(List<String> args) async {
     print(e);
   }
 }
+}
+ 

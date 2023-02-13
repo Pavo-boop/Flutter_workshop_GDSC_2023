@@ -54,12 +54,17 @@ void main(List<String> args) {
     {"a": 3, "b": 6, "c": 9},
   ];
   Map<String, int> sumOfValues = {};
-  sumOfValues.forEach((key, value) {});
+  sumOfValues.forEach((key, value) {
+  // sumOfValues[key]= (sumOfValues ?? 0);
+   
+  });
+  // return sumOfValues;
   // output should be {"a": 6, "b": 12, "c": 18}
-
+ 
   // Sort a Map by its keys and values
   Map<String, int> alphabets = {'b': 2, 'a': 1, 'c': 3};
-  Map<String, int> sortedAlphabets;
+  var sortedAlphabets =  alphabets.addEntries(alphabets.entries.toList()..sort((e1,e2)=>e1.key.compareTo(e2.key)));
+  print(sortedAlphabets);
   // output should be {'a': 1, 'b': 2, 'c': 3}
 
   // Filter the map using for each if the value is greater than 3
